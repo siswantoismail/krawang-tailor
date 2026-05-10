@@ -2,10 +2,11 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./App.css";
 import Home from "./pages/home";
-import Gallery from "./components/Gallery";
-import About from "./components/About";
+import Gallery from "./pages/gallery";
+import GalleryCategory from "./pages/category";
 import Services from "./pages/services";
-import Contact from "./components/Contact";
+import About from "./pages/about";
+import Contact from "./pages/contact";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const router = createBrowserRouter([
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
   {
     path: "/gallery",
     element: <Gallery />,
+  },
+  {
+    path: "/gallery/:category",
+    element: <GalleryCategory />,
   },
   {
     path: "/services",
